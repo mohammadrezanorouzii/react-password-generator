@@ -1,13 +1,20 @@
-.inputandoptions {
+body{
+  background-image: url("apple5.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container {
   display: inline-block;
-  border: 3px black solid;
+  border-radius: 20px;
   padding: 10px;
   width: 500px;
-  height: 450px;
-  position: relative;
+  height: 420px;
+  position: absolute;
+  top: 110px;
+  background-color: azure;
+  box-shadow: 3px 3px 3px rgb(190, 190, 190);
 }
 .App {
-  border: 3px red solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +40,6 @@
   font-size: 45px;
   border-radius: 10px;
 }
-progress {
-  width: 490px;
-}
 .quality-1 {
   margin-left: 110px;
 }
@@ -45,9 +49,22 @@ progress {
 .quality-3 {
   margin-left: 100px;
 }
-.switch1,.switch2,.switch3,.switch4  {
+.switch1,
+.switch2,
+.switch3,
+.switch4 {
   display: flex;
-  border: tomato 2px solid;
+  width: 250px;
+  padding: 5px 0 5px 5px;
+}
+.switch1,
+.switch3 {
+  border-right: rgb(169, 25, 231) 3px solid;
+}
+.switch1-2, 
+.switch3-4 {
+  display: flex;
+  border: rgb(169, 25, 231) 3px solid;
   margin-bottom: 10px;
 }
 .p-1 {
@@ -65,8 +82,7 @@ input[type="checkbox"] {
   background-color: #c6c6c6;
   border-radius: 15px;
   outline: none;
-  transition: 0.25s;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.35s;
 }
 input:checked[type="checkbox"] {
   background-color: greenyellow;
@@ -80,8 +96,85 @@ input[type="checkbox"]::before {
   top: 0;
   left: 0;
   border-radius: 15px;
-  transition: 0.25s;
+  transition: 0.35s;
 }
 input:checked[type="checkbox"]::before {
   left: 25px;
 }
+.range {
+  margin: auto 0;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #bebebe;
+  outline: none;
+  opacity: 0.8;
+}
+.range:hover {
+  opacity: 1;
+  cursor: pointer;
+}  
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #6c58dd;
+}
+.start-end {
+  display: flex;
+  flex-direction: row;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(228, 228, 226, 0.322);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.start{
+  margin-right: 10px;
+  font-size: x-large;
+  font-weight: 500;
+  color:#6c58dd;
+}
+.end{
+  margin-left: 10px;
+  font-size: x-large;
+  color:#6c58dd;
+}
+.count {
+  margin: 15px auto;
+  font-size: xx-large;
+  color:#664AFF;
+}
+.progress-container {
+  margin-top: 10px;
+}
+.myh2 {
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  border: #EAEAEA 1px solid;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.progress {
+  background-color: lightgray;
+  border-radius: 4px;
+  width: 100%;
+  height: 10px;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.progress-bar28 {
+  background-color: tomato;
+}
+.progress-bar60 {
+  background-color: rgb(255, 255, 31);
+}
+.progress-bar100 {
+  background-color: greenyellow;
+}
+
