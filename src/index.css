@@ -135,8 +135,8 @@ input:checked[type="checkbox"]::before {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: rgba(228, 228, 226, 0.322);
-  border-radius: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .start{
@@ -239,7 +239,6 @@ input:checked[type="checkbox"]::before {
 .myh1 {
   font-family: Arial, sans-serif;
 }
-
 .pass-container::-webkit-scrollbar {
   display: none;
 }
@@ -247,23 +246,6 @@ input:checked[type="checkbox"]::before {
 -ms-overflow-style: none; 
 scrollbar-width: none;  
 }
-/* 
-.pass-container::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
-
-.pass-container::-webkit-scrollbar
-{
-  width: 10px;
-  background-color: #F5F5F5;
-}
-
-.pass-container::-webkit-scrollbar-thumb
-{
-  background-color: #6c58dd;
-} */
 
 
 
