@@ -4,15 +4,17 @@ body{
   background-attachment: fixed;
 }
 .container {
-  display: inline-block;
+  display: flex;
   border-radius: 20px;
-  padding: 10px;
+  padding:  0 10px 10px 10px;
   width: 500px;
   height: 420px;
   position: absolute;
   top: 110px;
   background-color: azure;
   box-shadow: 3px 3px 3px rgb(190, 190, 190);
+  flex-direction: column;
+  justify-content: space-between;
 }
 .App {
   display: flex;
@@ -56,21 +58,23 @@ body{
   display: flex;
   width: 250px;
   padding: 5px 0 5px 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 .switch1,
 .switch3 {
-  border-right: rgb(169, 25, 231) 3px solid;
+  margin-right: 5px;
 }
 .switch1-2, 
 .switch3-4 {
   display: flex;
-  border: rgb(169, 25, 231) 3px solid;
   margin-bottom: 10px;
 }
 .p-1 {
-  font-size: 31px;
+  font-size: 30px;
   display: block;
   margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 input[type="checkbox"] {
   cursor: pointer;
@@ -151,30 +155,115 @@ input:checked[type="checkbox"]::before {
   font-size: xx-large;
   color:#664AFF;
 }
-.progress-container {
-  margin-top: 10px;
-}
-.myh2 {
+.pass-container {
+  height: 90px;
   padding: 10px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   border: #EAEAEA 1px solid;
-  overflow: auto;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
+  margin: 10px 0 0 0;
+  position: relative;
+}
+.btn-copy svg{
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  fill:gray
+}
+.btn-copy {
+  outline: none;
+  border: none;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 35px;
+  z-index: 1;
+}
+.copy-container {
+  top: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  background: rgb(255,255,255);
+  background: linear-gradient(270deg, rgba(255,255,255,1) 77%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+  width: 70px;
+}
+.btn-copy:hover {
+  opacity: 1;
 }
 .progress {
+  margin-top: -30px;
   background-color: lightgray;
   border-radius: 4px;
   width: 100%;
-  height: 10px;
+  height: 8px;
   box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.progress-bar{
+  transition: width 0.8s;
+  width: 0%;
+  border-radius: 4px;
+}
+.progress-bar0{
+  width: 0%;
+  height: 100%;
 }
 .progress-bar28 {
-  background-color: tomato;
+  background-color: red;
+  width: 33%;
+  height: 100%;
 }
 .progress-bar60 {
-  background-color: rgb(255, 255, 31);
+  background-color: orange;
+  width: 66%;
+  height: 100%;
+
 }
 .progress-bar100 {
-  background-color: greenyellow;
+  background-color: green;
+  width: 100%;
+  height: 100%;
 }
+.end, .start, .count {
+  font-family: 'Courier New', monospace;
+}
+.myh1 {
+  font-family: Arial, sans-serif;
+}
+
+.pass-container::-webkit-scrollbar {
+  display: none;
+}
+.pass-container {
+-ms-overflow-style: none; 
+scrollbar-width: none;  
+}
+/* 
+.pass-container::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.pass-container::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.pass-container::-webkit-scrollbar-thumb
+{
+  background-color: #6c58dd;
+} */
+
+
 
