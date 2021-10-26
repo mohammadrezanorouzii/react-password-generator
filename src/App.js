@@ -84,8 +84,6 @@ function App() {
       trueSetter(4);
     }
     
-    console.log("true count = " + trueCount);
-
     if (count > 11 && trueCount > 0 ){
       powerSetter(100);
     }
@@ -126,7 +124,7 @@ function App() {
       powerSetter(28);
     }
 
-    if (trueCount === 0 || count === 0){
+    if (trueCount == 0 || count == 0){
       powerSetter(0)
     }
 
@@ -211,7 +209,6 @@ function App() {
             </div> 
           </div>
         </div>
-
 
         <div className="input-container">
           <div className="start-end">

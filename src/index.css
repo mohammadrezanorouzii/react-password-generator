@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
 body{
   background-image: url("apple5.png");
   background-repeat: no-repeat;
@@ -11,8 +15,6 @@ body{
   height: 420px;
   position: absolute;
   top: 110px;
-  background-color: azure;
-  box-shadow: 3px 3px 3px rgb(190, 190, 190);
   flex-direction: column;
   justify-content: space-between;
 }
@@ -58,12 +60,8 @@ body{
   display: flex;
   width: 250px;
   padding: 5px 0 5px 5px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-}
-.switch1,
-.switch3 {
-  margin-right: 5px;
+  color: white;
 }
 .switch1-2, 
 .switch3-4 {
@@ -73,37 +71,40 @@ body{
 .p-1 {
   font-size: 30px;
   display: block;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
+  margin: 0 0 0 15px;
+  font-family: 'lato', sans-serif;
 }
 input[type="checkbox"] {
+  box-shadow: inset 1px 1px 2px gray;
   cursor: pointer;
   margin: 5.5px 0 0 0;
   position: relative;
   width: 50px;
   height: 25px;
   -webkit-appearance: none;
-  background-color: #c6c6c6;
+  background-color: #dfdfdf;
   border-radius: 15px;
   outline: none;
   transition: 0.35s;
 }
 input:checked[type="checkbox"] {
-  background-color: greenyellow;
+  background-color: rgb(52, 209, 52);
 }
 input[type="checkbox"]::before {
-  background-color: rgb(77, 72, 72);
+  background-color: white;
+  box-shadow: 2px 2px 2px gray , -1.5px -1.5px 2px rgba(211, 211, 211, 0.397);
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  top: 0;
-  left: 0;
+  width: 21px;
+  height: 21px;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
   border-radius: 15px;
   transition: 0.35s;
 }
 input:checked[type="checkbox"]::before {
-  left: 25px;
+  left: 26.5px;
 }
 .range {
   margin: auto 0;
@@ -125,7 +126,7 @@ input:checked[type="checkbox"]::before {
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background: #6c58dd;
+  background: white;
 }
 .start-end {
   display: flex;
@@ -137,34 +138,31 @@ input:checked[type="checkbox"]::before {
   padding: 10px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .start{
   margin-right: 10px;
   font-size: x-large;
   font-weight: 500;
-  color:#6c58dd;
+  color:white;
 }
 .end{
   margin-left: 10px;
   font-size: x-large;
-  color:#6c58dd;
+  color:white;
 }
 .count {
   margin: 15px auto;
   font-size: xx-large;
-  color:#664AFF;
+  color:white;
 }
 .pass-container {
   height: 90px;
   padding: 10px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
   border: #EAEAEA 1px solid;
+  background-color: white;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  overflow-x: auto;
   overflow-y: hidden;
-  scroll-behavior: smooth;
   margin: 10px 0 0 0;
   position: relative;
 }
@@ -189,9 +187,10 @@ input:checked[type="checkbox"]::before {
 .copy-container {
   top: 0;
   right: 0;
+  margin-right: auto;
   height: 100%;
   position: absolute;
-  background: rgb(255,255,255);
+  background-color: rgb(235, 255, 255);
   background: linear-gradient(270deg, rgba(255,255,255,1) 77%, rgba(255,255,255,0) 100%);
   z-index: 2;
   width: 70px;
@@ -202,16 +201,13 @@ input:checked[type="checkbox"]::before {
 .progress {
   margin-top: -30px;
   background-color: lightgray;
-  border-radius: 4px;
   width: 100%;
   height: 8px;
-  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
 .progress-bar{
   transition: width 0.8s;
   width: 0%;
-  border-radius: 4px;
 }
 .progress-bar0{
   width: 0%;
@@ -237,7 +233,10 @@ input:checked[type="checkbox"]::before {
   font-family: 'Courier New', monospace;
 }
 .myh1 {
-  font-family: Arial, sans-serif;
+  font-family: 'Zen Kurenaido', sans-serif;
+  letter-spacing: 1.1px;
+  position: absolute;
+  z-index: 0;
 }
 .pass-container::-webkit-scrollbar {
   display: none;
